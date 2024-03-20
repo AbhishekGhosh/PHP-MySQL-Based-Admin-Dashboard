@@ -1,23 +1,21 @@
 # PHP-MySQL-Based-Admin-Dashboard
 PHP MySQL Based Admin Dashboard partially written with ChatGPT 3.5
 
-In `login.php` file, edit to complete the form:
+Database Setup with `database.sql` file
 
-```
-// Database connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "your_database_name";
-```
+Create a MySQL database named dashboard.
+Create two tables: users and settings.
 
+Login Screen with `login.php`:
 
-Make sure to replace "your_database_name" with the name of your MySQL database. Additionally, create a table named users in your database with columns id, username, and password to store user credentials. Do not use MySQL root user.
+Create an HTML login form (login.php) with fields for username and password.
+Use PHP to authenticate users against the database.
 
-This example provides a basic implementation of a login system with a dashboard using PHP and MySQL. You can expand upon it by adding features such as user registration, password hashing, session management, and more robust error handling.
+Dashboard Layout with `dashboard.php`:
 
+Create an HTML dashboard page (dashboard.php) with Bootstrap for styling.
+Design the layout with navigation menus, data tables, charts, and form inputs.
 
+Logout Functionality with `logout.php`:
 
-
-
-
+Create a logout script (logout.php) to destroy the session and redirect to the login page.
