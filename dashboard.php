@@ -1,46 +1,38 @@
-<?php
-// Start session
-session_start();
-
-// Check if user is logged in
-if (!isset($_SESSION['username'])) {
-    header("Location: index.php");
-    exit();
-}
-?>
+<!-- dashboard.php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .welcome {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .logout {
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="container">
-        <h2 class="welcome">Welcome, <?php echo $_SESSION['username']; ?>!</h2>
-        <div class="logout">
-            <a href="logout.php">Logout</a>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">Dashboard</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 2</a>
+                </li>
+                <!-- Add more navigation links as needed -->
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="logout.php">Logout</a>
+                </li>
+            </ul>
         </div>
-        <!-- Dashboard content goes here -->
+    </nav>
+    <div class="container mt-5">
+        <h3>Welcome, <?php echo $_SESSION['username']; ?></h3>
+        <!-- Dashboard components (data tables, charts, forms, etc.) go here -->
     </div>
 </body>
 </html>
