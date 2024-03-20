@@ -1,5 +1,8 @@
 # PHP-MySQL-Based-Admin-Dashboard
-PHP MySQL Based Admin Dashboard partially written with ChatGPT 3.5
+
+PHP MySQL Based Admin Dashboard partially written with ChatGPT 3.5. 
+
+Somewhat advanced version is at dev branch - https://github.com/AbhishekGhosh/PHP-MySQL-Based-Admin-Dashboard/tree/dev
 
 In `login.php` file, edit to complete the form:
 
